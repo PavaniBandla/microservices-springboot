@@ -20,10 +20,6 @@ public class GatewayConfig {
                         .path("/api/orders/**")
                         .uri("lb://ORDER-SERVICE"))
 
-                .route("payment-service", r -> r
-                        .path("/api/payments/**")
-                        .uri("lb://PAYMENT-SERVICE"))
-
                 .route("auth-service", r -> r
                         .path("/auth/login/**")
                         .uri("lb://AUTH-SERVICE"))
