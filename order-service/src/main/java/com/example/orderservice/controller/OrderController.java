@@ -7,8 +7,11 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -27,6 +30,20 @@ public class OrderController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(orderService.create(dto));
+    }
+
+    @ExceptionHandler(ResponseStatusException.class)
+    public ResponseEntity<Map<String, Object>> handleResponseStatusException(
+            ResponseStatusException ex) {
+
+        Map<String, Object> response = new HashMap<>();
+
+        response.put("status", ex.getStatusCode().value());
+        response.put("message", ex.getReason());
+
+        return ResponseEntity
+                .status(ex.getStatusCode())
+                .body(response);
     }
 
     @GetMapping

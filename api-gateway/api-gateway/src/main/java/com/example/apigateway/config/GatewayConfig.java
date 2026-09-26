@@ -24,6 +24,10 @@ public class GatewayConfig {
                         .path("/api/payments/**")
                         .uri("lb://PAYMENT-SERVICE"))
 
+                .route("auth-service", r -> r
+                        .path("/auth/login/**")
+                        .uri("lb://AUTH-SERVICE"))
+
                 .build();
     }
 }

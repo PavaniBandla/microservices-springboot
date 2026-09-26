@@ -1,0 +1,5 @@
+C:\Users\pavan\Downloads\microservices-rest-demo\api-gateway\api-gateway\src\main\java\com\example\apigateway\ApiGatewayApplication.java
+C:\Users\pavan\Downloads\microservices-rest-demo\api-gateway\api-gateway\src\main\java\com\example\apigateway\config\GatewayConfig.java
+C:\Users\pavan\Downloads\microservices-rest-demo\api-gateway\api-gateway\src\main\java\com\example\apigateway\config\JwtConfig.java
+C:\Users\pavan\Downloads\microservices-rest-demo\api-gateway\api-gateway\src\main\java\com\example\apigateway\config\SecurityConfig.java
+C:\Users\pavan\Downloads\microservices-rest-demo\api-gateway\api-gateway\src\main\java\com\example\apigateway\filter\LoggingFilter.java
